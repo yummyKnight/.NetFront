@@ -59,3 +59,6 @@ namespace Client.Services.Implementations {
         }
     }
 }
+// git remote add origin git@github.com:yummyKnight/.NetFront.git
+//     git branch -M master
+//     git push -u origin master
