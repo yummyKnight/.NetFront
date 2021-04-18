@@ -1,0 +1,57 @@
+﻿@model System.Collections.Generic.IEnumerable<Client2.Models.Booking>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<h2>Add Booking</h2>
+<form method="post" action="/Booking/Put">
+    <div class="form-group">
+        <label for="ClientId">Client <small class="text-danger"> (requied)</small></label>
+        <select class="form-control" id="ClientId" name="ClientId" required>
+            @foreach (var booking in this.Model)
+            {
+                <option value="@booking.Client.Id">@booking.Client.FullName</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="RoomId">Room <small class="text-danger"> (requied)</small></label>
+        <select class="form-control" id="RoomId" name="RoomId" required>
+            @foreach (var booking in this.Model)
+            {
+                <option value="@booking.Room.Id">@booking.Room.Type</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="ReservedDay">ReservedDay <small class="text-danger"> (requied)</small>< </label>
+        <input type="datetime" name="ReservedDay" class="form-control" id="ReservedDay" required>
+    </div>
+    <div class="form-group">
+        <label for="CheckIn">CheckIn <small class="text-danger"> (requied)</small></label>
+        <input type="datetime" name="CheckIn" class="form-control" id="CheckIn" required>
+    </div>
+    <div class="form-group">
+        <label for="CheckOut">CheckOut <small class="text-danger"> (requied)</small></label>
+        <input type="datetime" name="CheckOut" class="form-control" id="CheckOut" required>
+    </div>
+    @* <div class="form-group"> *@
+    @*     <label for="IsCanceled">Is Canceled</label> *@
+    @*     <input type="checkbox" name="IsCanceled" class="form-control" id="IsCanceled" required> *@
+    @* </div> *@
+    @* <div class="form-group"> *@
+    @*     <label for="CanceledAt">CheckIn <small class="text-danger"> (requied)</small></label> *@
+    @*     <input type="datetime" name="CheckIn" class="form-control" id="CheckIn"> *@
+    @* </div> *@
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>

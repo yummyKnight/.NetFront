@@ -1,0 +1,34 @@
+﻿@model System.Collections.Generic.IEnumerable<Client2.Models.Room>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Type/th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var forecast in this.Model)
+        {
+            <tr>
+                <th scope="row">@forecast.Id</th>
+                <td>@forecast.Type</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

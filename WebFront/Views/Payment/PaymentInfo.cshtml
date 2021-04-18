@@ -1,0 +1,37 @@
+﻿@model Client2.Models.Payment
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Amount/th>
+            <th scope="col">Booking id/th>
+            <th scope="col">IsCanceled</th>
+            <th scope="col">CanceledAt</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">@Html.DisplayNameFor(model => model.Id)</th>
+            <td>@Html.DisplayNameFor(model => model.Amount)</td>
+            <td>@Html.DisplayNameFor(model => model.Booking.Id)</td>
+            <td>@Html.DisplayNameFor(model => model.IsCanceled)</td>
+            <td>@Html.DisplayNameFor(model => model.CanceledAt)</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

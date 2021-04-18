@@ -1,0 +1,31 @@
+﻿@model System.Collections.Generic.IEnumerable<Client2.Models.Client>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<h2>Add Disease</h2>
+<form method="post" action="/Client/Put">
+    <div class="form-group">
+        <label for="FullName ">Name <small class="text-danger"> (requied)</small></label>
+        <input type="text" name="FullName " class="form-control" id="FullName" required>
+    </div>
+    <div class="form-group">
+        <label for="Address">Description<small class="text-danger"> (requied)</small></label>
+        <input type="text" name="Address" class="form-control" id="Address" required>
+    </div>
+    <div class="form-group">
+        <label for="OrdersNum ">Number of orders</label>
+        <input type="number" name="OrdersNum" class="form-control" id="OrdersNum">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿@model Client2.Models.Room
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"></th>
+            <td>@Html.DisplayNameFor(model => model.Id)</td>
+            <td>@Html.DisplayNameFor(model => model.Type.Type)</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

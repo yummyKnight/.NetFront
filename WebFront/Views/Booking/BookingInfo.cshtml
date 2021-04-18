@@ -1,0 +1,41 @@
+﻿@model Client2.Models.Booking
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<h2>List of Booking</h2>
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Client Full Name</th>
+            <th scope="col">RoomType id/th>
+            <th scope="col">CheckIn</th>
+            <th scope="col">CheckOut</th>
+            <th scope="col">CanceledAt</th>
+            <th scope="col">IsCanceled</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th scope="row">@Html.DisplayNameFor(model => model.Id)</th>
+        <td>@Html.DisplayNameFor(model => model.Client.FullName)</td>
+        <td>@Html.DisplayNameFor(model => model.Room.Id)</td>
+        <td>@Html.DisplayNameFor(model => model.CheckIn)</td>
+        <td>@Html.DisplayNameFor(model => model.CheckOut)</td>
+        <td>@Html.DisplayNameFor(model => model.CanceledAt)</td>
+        <td>@Html.DisplayNameFor(model => model.IsCanceled)</td>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

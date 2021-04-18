@@ -1,0 +1,28 @@
+﻿@model System.Collections.Generic.IEnumerable<Client2.Models.Payment>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "";
+}
+
+<html>
+<body>
+<h2>Add Booking</h2>
+<form method="post" action="/Booking/Put">
+    <div class="form-group">
+        <label for="BookingId">Client <small class="text-danger"> (requied)</small></label>
+        <select class="form-control" id="BookingId" name="BookingId" required>
+            @foreach (var payment in this.Model)
+            {
+                <option value="@payment.Booking.Id">@payment.Booking.Id</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Amount">Amount (in dollars)<</label>
+        <input type="number" name="Amount" class="form-control" id="Amount">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
